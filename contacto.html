@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Friendly Market - Mystery Shopper</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/7814503af9.js" crossorigin="anonymous"></script>
+    <style>
+        form{
+            width: 90%;
+            max-width: 600px;
+        }
+        #formulario{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 200px;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .input-group{
+            margin-bottom: 30px;
+            /* position: relative; */
+            position: relative;
+            z-index: 0;
+        }
+
+        input, textarea{
+            width: 100%;
+            padding: 10px;
+            outline: 0;
+            border: 1px solid black;
+            font-size: 15px;
+        }
+
+        label{
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 10px;
+            cursor: text;
+            color: black;
+            transition: 0.2s;
+            user-select: none;
+        }
+  
+
+        button{
+            padding: 10px, 0;
+            color: white;
+            outline: none;
+            background-color: #442e22;
+            border-radius: 1px solid beige;
+            width: 100%;
+            cursor: pointer ;
+        }
+
+        input:focus~label,
+        input:valid~label,
+        textarea:focus~label,
+        textarea:valid~label{
+            top: -35px;
+            font-size: 14px;
+        }
+        
+        .row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .row .input-group{
+            flex-basis: 48%;
+        }
+
+        /*ul {
+            list-style-type: disc; 
+            color: black; 
+            font-size: 18px; 
+            text-align: center; 
+        } */
+
+        ol {
+            list-style-type: none; /* Oculta los números de la lista ordenada */
+            text-align: center; /* Centra el contenido de la lista */
+            padding-left: 0; /* Elimina el relleno izquierdo predeterminado de la lista */
+        }
+
+        ol li:before {
+            content: "\2022"; /* Agrega el punto gordo negro como contenido antes de cada elemento de la lista */
+            color: black; /* Cambia el color del punto */
+            font-size: 18px; /* Cambia el tamaño del punto */
+            margin-right: 5px; /* Añade un margen derecho para separar el punto del texto */
+        }
+
+        #wakala li::before{
+            content: "\2605"; /* Utiliza el código unicode de estrellita negra */
+            color: black; /* Cambia el color del cuadrado */
+            font-size: 18px; /* Cambia el tamaño del cuadrado */
+            margin-right: 5px; /* Añade un margen derecho para separar el cuadrado del texto */
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header class="header stycky-top" style="z-index: 1;">
+        <nav>
+            <div class="logo" style="display: flex;">
+                <div>
+                    <img src="furro.png" alt="Furro Logo" style="max-width: 100px;">
+                </div>
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-left: 10px;">
+                    <h1>Friendly Market</h1>
+                    <span class="slogan">Our mantra is fidelity</span>
+                </div>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="clientes.html">Clientes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="services" style="bottom: 0;">
+        <h1>Contáctanos</h1>
+        <section class="service" id="formulario">
+        <form style="margin-top: -50%; position:absolute;">
+            <div class="row">
+                <div class="input-group" style="padding-right: 30px;">
+                    <input type="text" required>
+                    <label for="name" id="name"><i class="fa-regular fa-user"></i> Tu nombre</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label for="name"><i class="fa-solid fa-mobile-retro"></i> Número telefónico</label>
+                </div>  
+            </div>
+        <div class="input-group">
+            <input type="text" required>
+            <label for="name" id="email"><i class="fa-regular fa-envelope"></i> Tu correo electrónico</label>
+        </div>
+        <div class="input-group">
+            <textarea  id="message"  rows="8" required></textarea>
+            <label for="message"><i class="fa-solid fa-pencil"></i> Escribe tu solicitud</label>
+        </div>
+        <button type="submmit" style="margin-right: -25px;">Enviar <i class="fa-regular fa-paper-plane"></i></button>
+    </form>
+</section>
+<div style="margin-top: -50%; position:relative;">
+    <h1>Dirección y nuestro contacto</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d760.7152144483209!2d-3.4409028303558777!3d40.301048321018484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd423f0ad5247f25%3A0xd30ff1e1671a292e!2sC.%20Juan%20de%20la%20Cierva%2C%2017%2C%2028500%20Arganda%20del%20Rey%2C%20Madrid!5e0!3m2!1sen!2ses!4v1685876234573!5m2!1sen!2ses" width="600" height="450" style="border-radius: 50px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br><br><br><br>
+    <div>
+        <!--<ul>
+            <li>Elemento 1</li><br>
+            <li>Elemento 2</li><br>
+            <li>Elemento 3</li><br>
+          </ul>-->
+          <h3>Nuestros datos:</h3>
+          <ol>
+            <li>C/Juan de la Cierva, 17</li>
+            <li>Centro urbano</li>
+            <li>28500 Arganda del Rey</li>
+            <li>Madrid España</li>
+            <li>Tel. fijo: 913 141 592</li>
+            <li>Tels. de contacto:</li>
+                <ol id="wakala">
+                    <li>+34 616 180 339</li>
+                    <li>+34 627 182 818</li>
+                </ol>
+            <li>info@famillyfriendlly.com</li>
+          </ol>
+    </div>
+</div>
+<br><br><br>
+</section>
+
+
+    
+<footer style="margin-bottom: 0;">
+    <p>&copy; 2023 Friendly Market. Todos los derechos reservados.</p>
+</footer>
+
+
+    
+    
+    
+</body>
